@@ -6,6 +6,7 @@ import { userServices } from '../user.services';
   templateUrl: './inactive-users.component.html',
   styleUrls: ['./inactive-users.component.css']
 })
+
 export class InactiveUsersComponent {
 
   users:string[];
@@ -13,7 +14,6 @@ export class InactiveUsersComponent {
   constructor(private userServices: userServices){
     this.users = userServices.inactiveUsers;
   }
-
   onSetToActive(id: number):void {
     this.userServices.setActive(id);
   }
